@@ -71,6 +71,9 @@ TARGET_SCREEN_DENSITY := 320
 # Compatibility Matrix
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ido
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ido
