@@ -20,7 +20,7 @@ $(call inherit-product, vendor/xiaomi/ido/ido-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-mokee
+    $(LOCAL_PATH)/overlay-lineage
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -151,7 +151,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.mokee.touch@1.0-service.ido
+    vendor.lineage.touch@1.0-service.ido
 
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -167,7 +167,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.build.vendor_security_patch=2017-01-01
+    ro.lineage.build.vendor_security_patch=2017-01-01
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -179,4 +179,4 @@ PRODUCT_PACKAGES += \
     libwpa_client
 
 # Inherit the rest from msm8916-common
-$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
+$(call inherit-product, device/xiaomi/msm8916-common/msm8916.mk)

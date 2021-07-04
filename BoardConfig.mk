@@ -16,7 +16,7 @@
 #
 
 # Inherit from msm8916-common
-include device/cyanogen/msm8916-common/BoardConfigCommon.mk
+include device/xiaomi/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/ido
 
@@ -73,7 +73,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_ido
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8916
-TARGET_KERNEL_CONFIG := mokee_ido_defconfig
+TARGET_KERNEL_CONFIG := ido_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x02000000
