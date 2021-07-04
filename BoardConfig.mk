@@ -72,7 +72,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_ido
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8916
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ido
 TARGET_KERNEL_CONFIG := ido_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
