@@ -30,6 +30,12 @@ on boot
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 
+    # charger
+    chown root system /sys/class/power_supply/bms/current_now
+    chown root system /sys/class/power_supply/bms/voltage_ocv
+    chmod 0664 /sys/class/power_supply/bms/current_now
+    chmod 0664 /sys/class/power_supply/bms/voltage_ocv
+
     # IR Blaster
     chown system system /sys/class/leds/infrared/transmit
     chown system system /sys/class/leds/infrared/brightness
@@ -45,3 +51,17 @@ on boot
     chmod 0660 /sys/devices/soc.0/fpc1020.70/irq
     chown system system /sys/devices/soc.0/fpc1020.70/spi_prepare
     chmod 0660 /sys/devices/soc.0/fpc1020.70/spi_prepare
+
+service vm_bms /system/vendor/bin/vm_bms
+    class core
+    user root
+    group root
+
+on charger
+    wait /dev/block/bootdevice/by-name/system
+    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+    chown root system /sys/class/power_supply/bms/current_now
+    chown root system /sys/class/power_supply/bms/voltage_ocv
+    chmod 0664 /sys/class/power_supply/bms/current_now
+    chmod 0664 /sys/class/power_supply/bms/voltage_ocv
+    start vm_bms
