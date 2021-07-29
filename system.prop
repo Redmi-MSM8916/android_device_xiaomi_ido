@@ -4,6 +4,11 @@ persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=false
 
+# Blur
+ro.surface_flinger.supports_background_blur=1
+debug.sf.disable_backpressure=1
+ro.sf.blurs_are_expensive=1
+
 # Camera
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
