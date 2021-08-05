@@ -16,7 +16,7 @@
 #
 
 # Inherit from msm8916-common
-include device/xiaomi/msm8916-common/BoardConfigCommon.mk
+include device/xiaomi/ido-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/ido
 
