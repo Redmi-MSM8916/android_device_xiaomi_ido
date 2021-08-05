@@ -179,4 +179,4 @@ PRODUCT_PACKAGES += \
     libwpa_client
 
 # Inherit the rest from msm8916-common
-$(call inherit-product, device/xiaomi/msm8916-common/msm8916.mk)
+$(call inherit-product, device/xiaomi/ido-common/msm8916.mk)
