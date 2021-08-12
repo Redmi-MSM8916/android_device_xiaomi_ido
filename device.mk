@@ -187,10 +187,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.ums=ff20 \
     ro.usb.id.ums_adb=ff28
 
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.build.vendor_security_patch=2017-01-01
-    
 # Privapp-permissions whitelisting
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce
