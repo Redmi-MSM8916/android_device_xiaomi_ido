@@ -26,15 +26,15 @@
 #
 
 on boot
-    # FM
-    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
-    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
-
     # charger
     chown root system /sys/class/power_supply/bms/current_now
     chown root system /sys/class/power_supply/bms/voltage_ocv
     chmod 0664 /sys/class/power_supply/bms/current_now
     chmod 0664 /sys/class/power_supply/bms/voltage_ocv
+
+    # FM
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 
     # IR Blaster
     chown system system /sys/class/leds/infrared/transmit
@@ -51,11 +51,33 @@ on boot
     chmod 0660 /sys/devices/soc.0/fpc1020.70/irq
     chown system system /sys/devices/soc.0/fpc1020.70/spi_prepare
     chmod 0660 /sys/devices/soc.0/fpc1020.70/spi_prepare
+    # cache
+    rm /cache/boot_lc_main.txt
+    rm /cache/boot_dmesg.txt
+    start boot_lc_main
+    start boot_dmesg
+
+service boot_dmesg /system/bin/sh -c "dmesg -w > /cache/boot_dmesg.txt"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_lc_main /system/bin/logcat -f /cache/boot_lc_main.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+on property:sys.boot_completed=1
+    stop boot_lc_main
+    stop boot_dmesg
 
 service vm_bms /system/vendor/bin/vm_bms
-    class core
-    user root
-    group root
+      class core
+      user root
+      group root   
 
 on charger
     wait /dev/block/bootdevice/by-name/system

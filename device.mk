@@ -42,6 +42,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/vendor/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/vendor/etc/usb_audio_policy_configuration.xml
 
+# Battery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/charger:system/bin/etc/charger
+    $(LOCAL_PATH)/configs/vm_bms:vendor/bin/vm_bms
+    
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
