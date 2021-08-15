@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/komodo_ido.mk
-    
+    $(LOCAL_DIR)/lineage_ido.mk
+
 COMMON_LUNCH_CHOICES := \
-    komodo_ido-eng \
-    komodo_ido-userdebug \
-    komodo_ido-user
+    lineage_ido-eng \
+    lineage_ido-userdebug \
+    lineage_ido-user

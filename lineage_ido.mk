@@ -15,12 +15,9 @@
 
 $(call inherit-product, device/xiaomi/ido/full_ido.mk)
 
-# Inherit some common KomodoOS stuff.
-$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
-USE_PIXEL_CHARGING := true
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-KOMODO_GAPPS_TYPE := nogapps
-KOMODO_VARIANT := RELEASE
 
 # Shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
@@ -31,7 +28,7 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8939
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ido
 
-PRODUCT_NAME := komodo_ido
+PRODUCT_NAME := lineage_ido
 BOARD_VENDOR := xiaomi
 PRODUCT_DEVICE := ido
 
