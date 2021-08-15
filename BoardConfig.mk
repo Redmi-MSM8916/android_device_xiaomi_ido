@@ -18,6 +18,7 @@
 # Inherit from msm8916-common
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
+BUILD_BROKEN_DUP_RULES := true
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8916
 QCOM_HARDWARE_VARIANT := msm8916
