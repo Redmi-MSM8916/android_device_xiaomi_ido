@@ -122,10 +122,10 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 
 # Play store
-ro.com.google.clientidbase.am=android-lenovo
-ro.com.google.clientidbase.gmm=android-lenovo
-ro.com.google.clientidbase.ms=android-lenovo
-ro.com.google.clientidbase.yt=android-lenovo
+ro.com.google.clientidbase.am=android-xiaomi
+ro.com.google.clientidbase.gmm=android-xiaomi
+ro.com.google.clientidbase.ms=android-xiaomi
+ro.com.google.clientidbase.yt=android-xiaomi
 
 # Radio
 persist.data.netmgrd.qos.enable=true
@@ -148,7 +148,7 @@ persist.timed.enable=true
 persist.vendor.delta_time.enable=true
 
 # Vendor security patch level
-ro.lineage.build.vendor_security_patch=2016-10-01
+ro.lineage.build.vendor_security_patch=2017-01-01
 
 # WiFi
 wifi.interface=wlan0
