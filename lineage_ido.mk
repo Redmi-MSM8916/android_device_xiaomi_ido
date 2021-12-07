@@ -18,11 +18,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
 
-# Inherit from A6020 device
-$(call inherit-product, device/lenovo/A6020/device.mk)
+# Inherit from ido device
+$(call inherit-product, device/xiaomi/ido/device.mk)
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product-if-exists, vendor/arrow/config/common.mk)
+# Inherit some common LineageOS stuff
+$(call inherit-product-if-exists, vendor/lineage/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -30,11 +30,11 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
-DEVICE_MAINTAINER := Adithya R
-PRODUCT_DEVICE := A6020
-PRODUCT_NAME := arrow_A6020
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := Vibe K5
-PRODUCT_MANUFACTURER := Lenovo
+DEVICE_MAINTAINER := xoo2001
+PRODUCT_DEVICE := ido
+PRODUCT_NAME := lineage_ido
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 3
+PRODUCT_MANUFACTURER := Xiaomi
 
-PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
