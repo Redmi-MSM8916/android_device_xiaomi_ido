@@ -1,5 +1,5 @@
 cc_library_static {
-    name: "libinit_A6020",
+    name: "libinit_ido",
     recovery_available: true,
     cpp_std: "c++17",
 
@@ -7,6 +7,6 @@ cc_library_static {
         "system/core/base/include",
         "system/core/init",
     ],
-    srcs: ["init_A6020.cpp"],
+    srcs: ["init_ido.cpp"],
     static_libs: ["libbase"],
 }
