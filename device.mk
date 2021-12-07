@@ -17,9 +17,9 @@
 #
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/lenovo/A6020/overlay
+DEVICE_PACKAGE_OVERLAYS += device/xiaomi/ido/overlay
 
-$(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ido/ido-vendor.mk)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
